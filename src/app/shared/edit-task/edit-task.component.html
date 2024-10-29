@@ -1,0 +1,43 @@
+<form class="edit-container" [formGroup]="formGroup" (ngSubmit)="saveData()">
+  <label>{{ 'TITLE' | translate }}:</label>
+  <input
+    type="text"
+    formControlName="title"
+    placeholder="{{ 'TITLE' | translate }}"
+  />
+  // убрать модалку, сделать одну для добавления и  и редактирования
+  <label>{{ 'DESCRIPTION' | translate }}:</label>
+  <input
+    type="text"
+    formControlName="description"
+    placeholder="{{ 'DESCRIPTION' | translate }}"
+  />
+  <label>{{ 'CATEGORY' | translate }}:</label>
+  <input
+    type="text"
+    formControlName="category"
+    placeholder="{{ 'CATEGORY' | translate }}"
+  />
+  <label>{{ 'PRIORITY' | translate }}:</label>
+  <select formControlName="priority" required>
+    <option value="low">{{ 'SELECT_OPTION_LOW' | translate }}</option>
+    <option value="medium">{{ 'SELECT_OPTION_MEDIUM' | translate }}</option>
+    <option value="high">{{ 'SELECT_OPTION_HIGH' | translate }}</option>
+  </select>
+  <label>{{ 'STATUS' | translate }}:</label>
+  <select formControlName="status">
+    <option value="new">{{ 'SEARCH_BY_NEW_STATUSES' | translate }}</option>
+    <option value="inProgress">
+      {{ 'SEARCH_BY_INPROGRESS_STATUSES' | translate }}
+    </option>
+    <option value="completed">
+      {{ 'SEARCH_BY_COMPLETED_STATUSES' | translate }}
+    </option>
+  </select>
+  <button class="dashboard-main-buttons" type="submit">
+    {{ 'SAVE_BUTTON' | translate }}
+  </button>
+  <button class="remove-button" type="button" (click)="close()">
+    {{ 'CANCEL_BUTTON' | translate }}
+  </button>
+</form>

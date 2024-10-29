@@ -1,0 +1,43 @@
+{
+  "DASHBOARD_BUTTON": "Доска задач",
+  "TASKS_BUTTON": "Список задач",
+  "SETTINGS_BUTTON": "Настройки",
+
+  "COMPLETE_BUTTON": "Завершить",
+  "REMOVE_BUTTON": "Удалить",
+  "REOPEN_BUTTON": "Переоткрыть",
+  "START_BUTTON": "Начать",
+  "SAVE_BUTTON": "Сохранить",
+  "CANCEL_BUTTON": "Отмена",
+  "EDIT_BUTTON": "Редактировать",
+  "TOGGLE_THEME_BUTTON": "Изменить тему",
+  "TOGGLE_LANGUAGE_BUTTON": "Изменить язык",
+  "RESET_SETTINGS_BUTTON": "Сбросить настройки",
+
+  "TOTAL_TASKS_FIELD": "Всего задач",
+  "COPMLETED_TASKS_FIELD": "Выполнено задач",
+  "INCOPMLETEd_TASKS_FIELD": "Не выполнено задач",
+  "TO_DO_COLUMN_HEADER": "Новые",
+  "IN_PROGRESS_COLUMN_HEADER": "В процессе выполнения",
+  "DONE_COLUMN_HEADER": "Выполнены",
+  "ACTIONS_COLUMN_HEADER": "Действия",
+
+  "TITLE": "Название",
+  "DESCRIPTION": "Описание",
+  "CATEGORY": "Категория",
+  "PRIORITY": "Приоритет",
+  "STATUS": "Статус",
+
+  "SEARCH_BY_TITLE": "Поиск по названию",
+  "SEARCH_BY_DECRIPTION": "Поиск по описанию",
+  "SEARCH_BY_CATEGORY": "Поиск по категории",
+  "SEARCH_BY_PRIORITY": "Поиск по приоритету",
+  "SEARCH_BY_ALL_STATUSES": "Все статусы",
+  "SEARCH_BY_INPROGRESS_STATUSES": "Выполняются",
+  "SEARCH_BY_COMPLETED_STATUSES": "Выполнены",
+  "SEARCH_BY_NEW_STATUSES": "Новые",
+
+  "SELECT_OPTION_LOW": "Низкий",
+  "SELECT_OPTION_MEDIUM": "Средний",
+  "SELECT_OPTION_HIGH": "Высокий"
+}

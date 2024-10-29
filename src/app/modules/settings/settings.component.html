@@ -1,0 +1,12 @@
+<button class="app-buttons" (click)="themeService.toggleTheme()">
+  {{ 'TOGGLE_THEME_BUTTON' | translate }}
+</button>
+<button class="app-buttons" (click)="settingsService.resetSettings()">
+  {{ 'RESET_SETTINGS_BUTTON' | translate }}
+</button>
+<button class="app-buttons" (click)="translateService.switchLanguage('en')">
+  English
+</button>
+<button class="app-buttons" (click)="translateService.switchLanguage('ru')">
+  Русский
+</button>

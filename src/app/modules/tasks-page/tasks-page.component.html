@@ -1,0 +1,86 @@
+<div class="task-filter-container">
+  <table class="task-table">
+    <thead>
+      <tr class="task-filters">
+        <th>
+          <input
+            type="text"
+            [formControl]="searchTitleControl"
+            placeholder="{{ 'SEARCH_BY_TITLE' | translate }}"
+          />
+        </th>
+        <th>
+          <input
+            type="text"
+            [formControl]="searchDescriptionControl"
+            placeholder="{{ 'SEARCH_BY_DECRIPTION' | translate }}"
+          />
+        </th>
+        <th>
+          <input
+            type="text"
+            [formControl]="searchCategoryControl"
+            placeholder="{{ 'SEARCH_BY_CATEGORY' | translate }}"
+          />
+        </th>
+        <th>
+          <input
+            type="text"
+            [formControl]="searchPriorityControl"
+            placeholder="{{ 'SEARCH_BY_PRIORITY' | translate }}"
+          />
+        </th>
+        <th>
+          <select [formControl]="searchStatusControl">
+            <option value="">{{ 'SEARCH_BY_ALL_STATUSES' | translate }}</option>
+            <option value="new">
+              {{ 'SEARCH_BY_NEW_STATUSES' | translate }}
+            </option>
+            <option value="inProgress">
+              {{ 'SEARCH_BY_INPROGRESS_STATUSES' | translate }}
+            </option>
+            <option value="completed">
+              {{ 'SEARCH_BY_COMPLETED_STATUSES' | translate }}
+            </option>
+          </select>
+        </th>
+      </tr>
+      <tr>
+        <th>{{ 'TITLE' | translate }}</th>
+        <th>{{ 'DESCRIPTION' | translate }}</th>
+        <th>{{ 'CATEGORY' | translate }}</th>
+        <th>{{ 'PRIORITY' | translate }}</th>
+        <th>{{ 'STATUS' | translate }}</th>
+        <th>{{ 'ACTIONS_COLUMN_HEADER' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor=" 
+          let task of taskService.filterTasks(
+            searchTitleControl,
+            searchCategoryControl,
+            searchStatusControl,
+            searchDescriptionControl,
+            searchPriorityControl
+          )
+        "
+      >
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.category }}</td>
+        <td>{{ task.priority }}</td>
+        <td>{{ task.status }}</td>
+        <td>
+          <button class="dashboard-main-buttons" (click)="createEditForm(task)">
+            {{ 'EDIT_BUTTON' | translate }}
+          </button>
+          <button class="remove-button" (click)="taskService.deleteTask(task)">
+            x
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div #editModalContainer></div>
+</div>

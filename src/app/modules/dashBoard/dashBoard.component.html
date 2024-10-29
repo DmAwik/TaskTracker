@@ -1,0 +1,101 @@
+<div class="dashboard">
+  <div class="task-summary">
+    <p>
+      {{ 'TOTAL_TASKS_FIELD' | translate }}:
+      <span>{{ taskService.taskCounts.total }}</span>
+    </p>
+    <p class="completed">
+      {{ 'COPMLETED_TASKS_FIELD' | translate }}:
+      <span>{{ taskService.taskCounts.completed }}</span>
+    </p>
+    <p class="incomplete">
+      {{ 'INCOPMLETEd_TASKS_FIELD' | translate }}:
+      <span>{{
+        taskService.taskCounts.new + taskService.taskCounts.inProgress
+      }}</span>
+    </p>
+    <button class="dashboard-main-buttons" (click)="openAddTaskForm()">
+      +
+    </button>
+  </div>
+  <ng-template #modalContainer></ng-template>
+  <div class="task-board">
+    <div class="column">
+      <div class="header">{{ 'TO_DO_COLUMN_HEADER' | translate }}</div>
+      <div *ngFor="let task of getTasksByStatus('new')" class="task-item">
+        <div class="paragraph">{{ 'TITLE' | translate }}: {{ task.title }}</div>
+        <div class="paragraph">
+          {{ 'DESCRIPTION' | translate }}: {{ task.description }}
+        </div>
+        <div class="paragraph">
+          {{ 'CATEGORY' | translate }}: {{ task.category }}
+        </div>
+        <div class="paragraph">
+          {{ 'PRIORITY' | translate }}: {{ task.priority }}
+        </div>
+        <button
+          class="dashboard-main-buttons"
+          (click)="taskService.saveModifiedStatusTask(task, 'inProgress')"
+        >
+          {{ 'START_BUTTON' | translate }}
+        </button>
+        <button class="remove-button" (click)="deleteTask(task)">
+          {{ 'REMOVE_BUTTON' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="header">{{ 'IN_PROGRESS_COLUMN_HEADER' | translate }}</div>
+      <div
+        *ngFor="let task of getTasksByStatus('inProgress')"
+        class="task-item"
+      >
+        <div class="paragraph">{{ 'TITLE' | translate }}: {{ task.title }}</div>
+        <div class="paragraph">
+          {{ 'DESCRIPTION' | translate }}: {{ task.description }}
+        </div>
+        <div class="paragraph">
+          {{ 'CATEGORY' | translate }}: {{ task.category }}
+        </div>
+        <div class="paragraph">
+          {{ 'PRIORITY' | translate }}: {{ task.priority }}
+        </div>
+        <button
+          class="dashboard-main-buttons"
+          (click)="taskService.saveModifiedStatusTask(task, 'completed')"
+        >
+          {{ 'COMPLETE_BUTTON' | translate }}
+        </button>
+        <button class="remove-button" (click)="deleteTask(task)">
+          {{ 'REMOVE_BUTTON' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="header">{{ 'DONE_COLUMN_HEADER' | translate }}</div>
+      <div *ngFor="let task of getTasksByStatus('completed')" class="task-item">
+        <div class="paragraph">{{ 'TITLE' | translate }}: {{ task.title }}</div>
+        <div class="paragraph">
+          {{ 'DESCRIPTION' | translate }}: {{ task.description }}
+        </div>
+        <div class="paragraph">
+          {{ 'CATEGORY' | translate }}: {{ task.category }}
+        </div>
+        <div class="paragraph">
+          {{ 'PRIORITY' | translate }}: {{ task.priority }}
+        </div>
+        <button
+          class="dashboard-main-buttons"
+          (click)="taskService.saveModifiedStatusTask(task, 'inProgress')"
+        >
+          {{ 'REOPEN_BUTTON' | translate }}
+        </button>
+        <button class="remove-button" (click)="deleteTask(task)">
+          {{ 'REMOVE_BUTTON' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

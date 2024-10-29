@@ -1,0 +1,43 @@
+{
+  "DASHBOARD_BUTTON": "Dashboard",
+  "TASKS_BUTTON": "Tasks",
+  "SETTINGS_BUTTON": "Settings",
+
+  "COMPLETE_BUTTON": "Complete",
+  "REMOVE_BUTTON": "Remove",
+  "REOPEN_BUTTON": "Reopen",
+  "START_BUTTON": "Start",
+  "SAVE_BUTTON": "Save",
+  "CANCEL_BUTTON": "Cancel",
+  "EDIT_BUTTON": "Edit",
+  "TOGGLE_THEME_BUTTON": "Toggle theme",
+  "TOGGLE_LANGUAGE_BUTTON": "Toggle LANGUAGE",
+  "RESET_SETTINGS_BUTTON": "Reset settings",
+
+  "TOTAL_TASKS_FIELD": "Total tasks",
+  "COPMLETED_TASKS_FIELD": "Completed tasks",
+  "INCOPMLETEd_TASKS_FIELD": "Incompleted tasks",
+  "TO_DO_COLUMN_HEADER": "To do",
+  "IN_PROGRESS_COLUMN_HEADER": "In Progress",
+  "DONE_COLUMN_HEADER": "Done",
+  "ACTIONS_COLUMN_HEADER": "Actions",
+
+  "TITLE": "Title",
+  "DESCRIPTION": "Description",
+  "CATEGORY": "Category",
+  "PRIORITY": "Priority",
+  "STATUS": "Status",
+
+  "SEARCH_BY_TITLE": "Search by title",
+  "SEARCH_BY_DECRIPTION": "Search by description",
+  "SEARCH_BY_CATEGORY": "Search by category",
+  "SEARCH_BY_PRIORITY": "Search by priority",
+  "SEARCH_BY_ALL_STATUSES": "All Statuses",
+  "SEARCH_BY_INPROGRESS_STATUSES": "In Progress",
+  "SEARCH_BY_COMPLETED_STATUSES": "Completed",
+  "SEARCH_BY_NEW_STATUSES": "New",
+
+  "SELECT_OPTION_LOW": "Low",
+  "SELECT_OPTION_MEDIUM": "Medium",
+  "SELECT_OPTION_HIGH": "High"
+}

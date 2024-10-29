@@ -1,0 +1,33 @@
+<div class="modal-overlay" (click)="closeForm()"></div>
+<div class="modal-content">
+  <div class="modal-body">
+    <form [formGroup]="addTaskForm" (ngSubmit)="addTask()">
+      <div class="form-group">
+        <label for="taskTitle">{{ 'TITLE' | translate }}:</label>
+        <input id="taskTitle" formControlName="title" required />
+      </div>
+      <div class="form-group">
+        <label for="taskDescription">{{ 'DESCRIPTION' | translate }}:</label>
+        <input id="taskDescription" formControlName="description" required />
+      </div>
+      <div class="form-group">
+        <label for="taskCategory">{{ 'CATEGORY' | translate }}:</label>
+        <input id="taskCategory" formControlName="category" required />
+      </div>
+      <div class="form-group">
+        <label for="taskPriority">{{ 'PRIORITY' | translate }}:</label>
+        <select id="taskPriority" formControlName="priority" required>
+          <option value="low">{{ 'SELECT_OPTION_LOW' | translate }}</option>
+          <option value="medium">
+            {{ 'SELECT_OPTION_MEDIUM' | translate }}
+          </option>
+          <option value="high">{{ 'SELECT_OPTION_HIGH' | translate }}</option>
+        </select>
+      </div>
+      <button type="submit">{{ 'SAVE_BUTTON' | translate }}</button>
+      <button type="button" (click)="closeForm()">
+        {{ 'CANCEL_BUTTON' | translate }}
+      </button>
+    </form>
+  </div>
+</div>

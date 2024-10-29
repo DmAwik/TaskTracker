@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <ul class="tab-list">
+    <li>
+      <a routerLink="/dashboard" routerLinkActive="active">{{
+        'DASHBOARD_BUTTON' | translate
+      }}</a>
+    </li>
+    <li>
+      <a routerLink="/tasks" routerLinkActive="active">{{
+        'TASKS_BUTTON' | translate
+      }}</a>
+    </li>
+    <li>
+      <a routerLink="/settings" routerLinkActive="active">{{
+        'SETTINGS_BUTTON' | translate
+      }}</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

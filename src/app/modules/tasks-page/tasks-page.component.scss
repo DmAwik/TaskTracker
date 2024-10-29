@@ -1,0 +1,52 @@
+.task-filter-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  thead tr:first-child th {
+    border: none;
+  }
+}
+
+.app-buttons {
+  border: none;
+  padding: 5px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashboard-main-buttons {
+  @extend .app-buttons;
+  margin: 2px 3px;
+  background-color: #007bff;
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+.remove-button {
+  @extend .app-buttons;
+  background-color: #f80303;
+
+  &:hover {
+    background-color: #f40707;
+  }
+}

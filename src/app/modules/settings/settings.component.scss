@@ -1,0 +1,11 @@
+.app-buttons {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 40px 8px;
+  background-color: #007bff;
+  &:hover {
+    background-color: #0056b3;
+  }
+}
